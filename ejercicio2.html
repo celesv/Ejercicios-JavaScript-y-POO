@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+        let newArr = [];
+
+        function ordenarNumeros(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        const temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+
+
+            for (let i = 0; i < arr.length; i++) {
+                if (typeof arr[i] === 'number') {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+
+        const resultado = ordenarNumeros(inicio);
+        console.log(resultado);
+
+    </script>
+    </script>
+</body>
+
+</html>
